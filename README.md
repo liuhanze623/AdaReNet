@@ -10,13 +10,15 @@ Official implementation.
 > Through extensive experiments on three typical methods, we have demonstrated the effectiveness of the proposed method.
 
 
+## Introduction
 
-#### Introduction
+<div align="center">
+  <img src="/image/equivariance.png" alt="Equivariance comparison">
+  <p><em>Illustration of the output feature map of a typical image obtained by standard CNN and our used rotation equivariant convolution neural network. Both networks are initialized randomly.</em></p>
+</div>
 
-![image-20250314140436039](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20250314140436039.png)
+## Network Architecture
 
-Illustration of the output feature map of a typical image obtained by standard CNN and our used rotation equivariant convolution neural network. Both networks are initialized randomly.
-
-#### Network Architecture
-
-![image-20250314140729468](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20250314140729468.png)
+<div align="center">
+  <img src="/image/adarenet.png" alt="AdaReNet architecture">
+</div>
