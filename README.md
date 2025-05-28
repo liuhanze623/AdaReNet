@@ -1,4 +1,4 @@
-# Rotation-Equivariant Self-Supervised Method in Image Denoising（CVPR2025）
+# Rotation-Equivariant Self-Supervised Method in Image Denoising（CVPR 2025）
 Official implementation.
 
 > **Abstract**: Self-supervised image denoising methods have garnered significant research attention in recent years, for this kind of method reduces the requirement of large training datasets.
@@ -22,3 +22,20 @@ Official implementation.
 <div align="center">
   <img src="/image/adarenet.png" alt="AdaReNet architecture">
 </div>
+
+
+## Experiments
+### Installation
+```bash
+conda env create -f environment.yml
+conda activate n2n
+```
+
+### Dataset
+Same setup as previous articles, we train the network using 256×256-pixel crops drawn from the 50k images in the IMAGENET validation set.
+
+
+### Training
+```bash
+CUDA_VISIBLE_DEVICES=0 python src/train.py --train-dir [training data] --train-size 50000 --valid-dir [valid data] --valid-size 24 --ckpt-save-path [save path] --nb-epochs 40 --batch-size 4 --loss l2 --noise-type [gaussian] --noise-param [50] --seed [seed] --crop-size 256 --plot-stats --cuda  --report-interval [1250]
+```
